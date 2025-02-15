@@ -1,44 +1,49 @@
 import * as React from "react";
+import { createBrowserRouter } from "react-router-dom";
 
-import {
-  createBrowserRouter,
-  Link,
-} from "react-router-dom";
-
-
-import Home from "../nav/Home"
-import About from "../nav/About"
-import Services from '../nav/Services'
-import Contacts from '../nav/Contacts'
+import Layout from "../layout/Layout";
+import Home from "../nav/Home";
+import About from "../nav/About";
+import Services from "../nav/Services";
+import Contacts from "../nav/Contacts";
+import Footer from "../componants/Footer";
 
 const router = createBrowserRouter([
-  
-  {
-    path: "/about",
-    element: (
-        <About/>
-    ),
-  },
-  {
-    path: "/contact",
-    element: (
-        <Contacts/>
-    ),
-  },
-  {
-    path: "/services",
-    element: (
-        <Services/>
-    ),
-  },
   {
     path: "/",
-    element: (
-        <Home/>
-    ),
-  },
+    element: <Layout />, // Wrap all pages inside Layout
+    children: [
+      {
+        path: "/", element:
+          <>
+            <Home />
+           
+          </>
 
-  
+      },
+      {
+        path: "/about", element: <>
+          <About />
+          <Footer />
+        </>
+      },
+      {
+        path: "/services", element:
+          <>
+            <Services />
+            <Footer />
+          </>
+      },
+      {
+        path: "/contact", element:
+          <>
+            <Contacts />
+            <Footer />
+          </>
+
+      },
+    ],
+  },
 ]);
 
 export default router;
