@@ -151,6 +151,82 @@ body{
 }
 
 
+.team {
+  background-color: #121212; /* Black background */
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.team__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #efeb13; /* Yellow heading */
+  margin-bottom: 1.5rem;
+}
+
+.team__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cards__item {
+  background: #1e1e1e; /* Dark gray card */
+  padding: 2rem;
+
+  border-radius: 10px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cards__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(255, 255, 0, 0.3);
+}
+
+/* Image Styling */
+/* .cards__image img {
+  padding-top:2rem ;
+  width: 130px;
+  height: 130px;
+  /* border-radius: 50%; */
+  /* border: 3px solid #efeb13; */
+  /* margin:;
+  object-fit: fit;
+  margin-bottom: 1rem;
+} */ 
+
+.cards__name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.cards__job {
+  font-size: 1rem;
+  color: #efeb13; /* Yellow job text */
+  margin-bottom: 0.5rem;
+}
+
+.cards__info {
+  font-size: 1rem;
+  color: #ddd; /* Light gray text */
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team__cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 /* Background Image Section */
 
@@ -870,9 +946,9 @@ nav ul li a:hover {
   margin: 0 auto 1rem;
 }
 
-.image {
+/* .image {
   max-width: 50px;
-}
+} */
 
 .cards__title {
   font-size: 1.3rem;
@@ -900,3 +976,5 @@ nav ul li a:hover {
 #services{
   margin-top: 5%;
 }
+
+

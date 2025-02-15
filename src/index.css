@@ -531,7 +531,7 @@ a {
 .cards__image {
   width: 130px;
   height: 130px;
-  background-color: var(--grey-color);
+  /* background-color: var(--grey-color); */
   border-radius: 100px;
 }
 .cards__name {
